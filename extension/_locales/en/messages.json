@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "US Tariff Lookup: HTS Codes & Duty Rates",
+    "description": "Extension display name"
+  },
+  "extDesc": {
+    "message": "Look up US HTS codes, MFN & China Section 301 duty rates instantly. Full landed-cost calculator at invoicetariff.com.",
+    "description": "Extension short description (max 132 chars)"
+  },
+  "contextMenu": {
+    "message": "Look up in US Tariff Lookup",
+    "description": "Context menu item label; %s is appended by Chrome"
+  }
+}

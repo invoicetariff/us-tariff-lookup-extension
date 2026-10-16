@@ -1,0 +1,115 @@
+:root {
+  --primary: #1b4dd1;
+  --primary-dark: #153cae;
+  --ink: #111827;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --chip-mfn: #e8effd;
+  --chip-301: #fdeaea;
+  --chip-301-ink: #b42318;
+  --chip-232: #fef4e6;
+  --chip-232-ink: #b45309;
+  --accent: #0f766e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e5e7eb;
+    --muted: #9ca3af;
+    --line: #374151;
+    --bg: #111827;
+    --bg-soft: #1f2937;
+    --chip-mfn: #1e3a8a33;
+    --chip-301: #7f1d1d33;
+    --chip-301-ink: #fca5a5;
+    --chip-232: #92400e33;
+    --chip-232-ink: #fcd34d;
+    --accent: #5eead4;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 384px;
+  margin: 0;
+  font: 13px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.head-text { display: flex; flex-direction: column; min-width: 0; }
+.head h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--primary);
+  letter-spacing: 0.1px;
+}
+.ruleset { font-size: 10.5px; color: var(--muted); }
+
+.searchbar { padding: 8px 10px; border-bottom: 1px solid var(--line); background: var(--bg-soft); }
+#q {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 13.5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--ink);
+  outline: none;
+}
+#q:focus { border-color: var(--primary); box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 18%, transparent); }
+
+.results { max-height: 432px; overflow-y: auto; }
+
+.item { padding: 9px 12px 8px; border-bottom: 1px solid var(--line); }
+.item-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; font-weight: 650; color: var(--primary); }
+.mfn { font-size: 12px; font-weight: 700; color: var(--primary-dark); background: var(--chip-mfn); padding: 1.5px 7px; border-radius: 999px; white-space: nowrap; }
+.desc { margin: 3px 0 6px; font-size: 12px; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.desc-zh { display: block; font-size: 11.5px; color: var(--ink); font-weight: 550; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font-size: 10.5px; font-weight: 600; padding: 1.5px 7px; border-radius: 999px; white-space: nowrap; }
+.chip.cn301 { background: var(--chip-301); color: var(--chip-301-ink); }
+.chip.s232 { background: var(--chip-232); color: var(--chip-232-ink); }
+.item-actions { display: flex; gap: 10px; margin-top: 6px; }
+.item-actions a, .item-actions button {
+  font-size: 11.5px; color: var(--primary); text-decoration: none;
+  background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit;
+}
+.item-actions a:hover, .item-actions button:hover { text-decoration: underline; }
+.item-actions .copied { color: var(--accent); }
+
+.recents { padding: 6px 12px 2px; }
+.recents-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+.recents-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.recents-list button {
+  font-size: 11px; padding: 2px 8px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--bg-soft); color: var(--muted);
+  font-family: inherit;
+}
+.recents-list button:hover { border-color: var(--primary); color: var(--primary); }
+.hidden { display: none; }
+
+.empty { padding: 22px 16px; text-align: center; color: var(--muted); font-size: 12.5px; }
+.empty b { color: var(--ink); font-weight: 600; }
+
+.foot {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 12px; border-top: 1px solid var(--line); background: var(--bg-soft);
+  font-size: 11.5px;
+}
+.foot a { color: var(--primary); text-decoration: none; white-space: nowrap; }
+.foot a:hover { text-decoration: underline; }
+.foot .dot { color: var(--muted); }

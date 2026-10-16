@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>US Tariff Lookup</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="head">
+      <img src="../icons/icon32.png" alt="" width="22" height="22" />
+      <div class="head-text">
+        <h1 id="title">US Tariff Lookup</h1>
+        <span id="ruleset" class="ruleset">…</span>
+      </div>
+    </header>
+
+    <div class="searchbar">
+      <input id="q" type="search" autocomplete="off" spellcheck="false"
+             placeholder="HTS code or product keyword…" />
+    </div>
+
+    <div id="recents" class="recents hidden"></div>
+    <main id="results" class="results" aria-live="polite"></main>
+
+    <footer class="foot">
+      <a id="lnk-calc" href="https://invoicetariff.com/en/tariff-calculator" target="_blank" rel="noopener">↗ Landed-cost calculator</a>
+      <span class="dot">·</span>
+      <a id="lnk-radar" href="https://invoicetariff.com/en/radar" target="_blank" rel="noopener">Tariff radar</a>
+      <span class="dot">·</span>
+      <a id="lnk-home" href="https://invoicetariff.com/" target="_blank" rel="noopener">invoicetariff.com</a>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

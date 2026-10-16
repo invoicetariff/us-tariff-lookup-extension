@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "美国关税速查：HTS 编码与税率",
+    "description": "扩展名称"
+  },
+  "extDesc": {
+    "message": "即查美国 HTS 编码、MFN 与对华 301 税率，完整落地成本计算器见 invoicetariff.com。",
+    "description": "扩展简短描述（≤132 字符）"
+  },
+  "contextMenu": {
+    "message": "用 US Tariff Lookup 查询",
+    "description": "右键菜单项文案"
+  }
+}
